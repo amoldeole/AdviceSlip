@@ -1,0 +1,15 @@
+<section id="info">
+    <div class="row cards">
+        <div class="card col-md-12 my-2" *ngFor="let adv of searchedList;">
+            <h2 class="mb-5">Advice</h2>
+            <p class="py-2">{{adv?.advice}}</p>
+        </div>
+        <div id="circle" *ngIf="!searchedList.length && !noDataMessage">
+            <div class="loader"></div>
+        </div>
+        <div *ngIf="noDataMessage" class="p-3 text-light bg-secondary">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            {{noDataMessage}}
+        </div>
+    </div>
+</section>
